@@ -28,6 +28,9 @@ const {
   sess_out
 } = require('./helper/sess-config');
 
+// Pug 
+app.set('view engine', 'pug')
+
 app.use('/', sess_out, require('./routers/indexRouter'));
 app.use('/register', sess_out, require('./routers/registerRouter'));
 app.use('/login', sess_out, require('./routers/loginRouter'));
