@@ -22,9 +22,15 @@ app.use(session({
   }
 }));
 
-app.use('/', require('./routers/indexRouter'));
-app.use('/register', require('./routers/registerRouter'));
-app.use('/login', require('./routers/loginRouter'));
-app.use('/flow', require('./routers/flowRouter'));
+// Session Access Control
+const {
+  sess_in,
+  sess_out
+} = require('./helper/sess-config');
+
+app.use('/', sess_out, require('./routers/indexRouter'));
+app.use('/register', sess_out, require('./routers/registerRouter'));
+app.use('/login', sess_out, require('./routers/loginRouter'));
+app.use('/cvc', sess_in, require('./routers/cvcRouter'));
 
 app.listen(8000, () => console.log('Server Running..'));

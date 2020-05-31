@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
     
     promise.then(data => {
         req.session.user_id = data[0]._id;
-        res.redirect('/flow');
+        res.redirect('/cvc');
     }).catch(err => console.log(err));
 });
 
