@@ -8,7 +8,7 @@ const usersModel = require('../models/usersModel');
 const cardModel = require('../models/cardModel');
 
 router.get('/', (req, res) => {
-    res.send('REGISTER GET')
+    res.render('register')
 });
 
 router.post('/', (req, res) => {

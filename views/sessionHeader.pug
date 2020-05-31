@@ -1,0 +1,27 @@
+html
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet', href='../public/css/sessionHeader.css')
+
+        script(type='text/javascript', src='../public/js/sessionHeader.js')
+
+
+        title | CvC
+
+    body
+        #myTopnav.topnav
+            a.active(href='#home') CEYHUN GARAGE
+            a(href='#news') News
+            a(href='#contact') Contact
+            .dropdown
+                button.dropbtn
+                    | Dropdown 
+                    i.fa.fa-caret-down
+                .dropdown-content
+                    a(href='#') Link 1
+                    a(href='#') Link 2
+                    a(href='#') Link 3
+            a(href='#about') About
+            a.icon(href='javascript:void(0);', style='font-size:15px;', onclick='myFunction()') &#x2630;

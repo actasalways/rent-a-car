@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const alert = require('alert-node');;
 
 const router = express.Router();
 
@@ -7,7 +8,7 @@ const router = express.Router();
 const usersModel = require('../models/usersModel');
 
 router.get('/', (req, res) => {
-    res.send('LOGIN GET');
+    res.render('login');
 });
 
 router.post('/', (req, res) => {
@@ -16,7 +17,10 @@ router.post('/', (req, res) => {
     promise.then(data => {
         req.session.user_id = data[0]._id;
         res.redirect('/cvc');
-    }).catch(err => console.log(err));
+    }).catch(err => {
+        alert('Kullanıcı Bilgilerin Yanlış!');
+        res.render('login');
+    });
 });
 
 module.exports = router;

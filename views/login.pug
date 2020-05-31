@@ -1,0 +1,23 @@
+html
+    head
+        title Login
+        link(rel='stylesheet', href='../public/css/login.css')
+
+    body
+        include indexHeader.pug
+
+        .container
+            h1.container-title CEYHUN GARAGE
+            h3.container-slogan Seni tekrar gördüğüme sevindim!
+
+            form(method='POST')
+                input(type='text', placeholder='E-Mail', name='email')
+                input(type='password', placeholder='Password', name='password')
+                input(type='submit', value='Giriş Yap')
+
+        .sub-container
+            p
+                | Hesabın yoksa 
+                a(href='/register') neyi bekliyorsun?
+
+        include footer.pug

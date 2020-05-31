@@ -1,0 +1,25 @@
+html
+    head
+        title Login
+        link(rel='stylesheet', href='../public/css/login.css')
+
+    body
+        include indexHeader.pug
+
+        .container
+            h1.container-title CEYHUN GARAGE
+            h3.container-slogan İstediğin arabaya ulaşmana son bir adım kaldı!
+
+            form(method='POST')
+                input(type='text', placeholder='Adı', name='name')
+                input(type='text', placeholder='Soyadı', name='surname')
+                input(type='text', placeholder='E-Mail', name='email')
+                input(type='password', placeholder='Şifre', name='password')
+                input(type='submit', value='Giriş Yap')
+
+        .sub-container
+            p
+                | Hesabın mı var? 
+                a(href='/login') Giriş Yap!
+
+        include footer.pug

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    background-color: #FAFAFA;
+}
+
+.container{
+    width: 25%;
+    margin: auto;
+    background-color: #FFF;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.container-title, .container-slogan{
+    text-align: center;
+}
+
+.container-title{
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.container-slogan{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container form{
+    text-align: center;
+}
+
+.container input{
+    font-size: 18px;
+    width: 75%;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #FAFAFA;
+}
+
+.container input[type="submit"]{
+    border: none;
+    background-color: darkorange;
+    color: #FFF;
+    padding: 7px 32px;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.forgot-field{
+    text-align: center;
+}
+
+.forgot-field p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.forgot-field a{
+    text-decoration: none;
+    color: darkorange;
+    font-weight: bold;
+}
+
+.sub-container{
+    width: 25%;
+    margin: auto;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+.sub-container p{
+    text-align: center;
+}
+
+.sub-container p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: darkorange;
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        width: 100%;
+        padding: 5;
+    }
+
+    .sub-container{
+        width: 100%;
+    }
+}
