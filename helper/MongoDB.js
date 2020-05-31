@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { DB_HOST, DB_NAME } = require('./config');
+const { DB_HOST, DB_NAME } = require('./mongo-config');
 
 module.exports = () =>
 
@@ -8,7 +8,8 @@ module.exports = () =>
         `mongodb+srv://${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`,
          {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            useCreateIndex: true
          }
     );
 

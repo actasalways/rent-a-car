@@ -3,7 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 
-//Model
+// Model
 const usersModel = require('../models/usersModel');
 const cardModel = require('../models/cardModel');
 
