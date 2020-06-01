@@ -1,0 +1,77 @@
+.container{
+    display: flex;
+}
+
+.filter{
+    background-color: #A9A9A9;
+    width: calc(15% - 10px);
+    padding: 5px;
+}
+
+.filter input{
+    width: 100%;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #FAFAFA;
+}
+
+.result{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF;
+    width: 85%;
+}
+
+.car-container{
+    display: flex;
+    border: 1px solid #FAFAFA;
+    width: 400px;
+    height: 300px;
+    justify-content: space-around;
+    align-content: stretch;
+}
+
+.car-info{
+    width: 368px;
+}
+
+.car-info a input[type="submit"]{
+    border: none;
+    background-color: darkorange;
+    color: #FFF;
+    padding: 7px 32px;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.car-image img{
+    width: 300px;
+    height: 250px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        display: block;
+    }
+
+    .filter{
+        width: calc(100% - 10px);
+        padding: 5px;
+    }
+
+    .result{
+        width: 100%;
+    }
+
+    .car-container{
+        width: 100%;
+    }
+}

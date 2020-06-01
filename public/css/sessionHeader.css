@@ -1,4 +1,8 @@
-body {margin:0;font-family:Arial}
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #FAFAFA;
+}
 
 .topnav {
   overflow: hidden;
