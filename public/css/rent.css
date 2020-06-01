@@ -31,11 +31,10 @@
     width: 400px;
     height: 300px;
     justify-content: space-around;
-    align-content: stretch;
 }
 
 .car-info{
-    width: 368px;
+    width: 250px;
 }
 
 .car-info a input[type="submit"]{

@@ -35,9 +35,9 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', require('./routers/adminRouter'))
 
-app.use('/register', sess_out, require('./routers/registerRouter'));
-app.use('/login', sess_out, require('./routers/loginRouter'));
-app.use('/cvc', sess_in, require('./routers/cvcRouter'));
-app.use('/', sess_out, require('./routers/indexRouter'));
+app.use('/register', /*sess_out,*/ require('./routers/registerRouter'));
+app.use('/login', /*sess_out,*/ require('./routers/loginRouter'));
+app.use('/cvc', /*sess_in,*/ require('./routers/cvcRouter'));
+app.use('/', /*sess_out,*/ require('./routers/indexRouter'));
 
 app.listen(8000, () => console.log('Server Running..'));
