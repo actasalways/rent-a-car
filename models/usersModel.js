@@ -15,8 +15,14 @@ const usersSchema = new Schema({
         required: true,
         unique: true
     },
+    phone: {
+        type: String,
+        require: true,
+        unique: true
+    },
     password: {
         type: String,
+        maxlength: 7,
         required: true
     }
 }, { collection: 'users' });

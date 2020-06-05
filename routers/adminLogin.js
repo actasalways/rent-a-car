@@ -4,21 +4,21 @@ const alert = require('alert-node');;
 const router = express.Router();
 
 // Model
-const usersModel = require('../models/usersModel');
+const adminModel = require('../models/adminModel');
 
 router.get('/', (req, res) => {
-    res.render('login');
+    res.render('adminLogin');
 });
 
 router.post('/', (req, res) => {
-    const promise = usersModel.find(req.body);
+    const promise = adminModel.find(req.body);
     
     promise.then(data => {
-        req.session.user_id = data[0]._id;
-        res.redirect('/cvc');
+        req.session.admin_session = data[0]._id;
+        res.redirect('/admin');
     }).catch(err => {
         alert('Kullanıcı Bilgilerin Yanlış!');
-        res.render('login');
+        res.render('adminLogin');
     });
 });
 

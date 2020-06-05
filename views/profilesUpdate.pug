@@ -1,0 +1,23 @@
+html
+    head
+        link(rel='stylesheet', href='../../public/css/sessionHeader.css')
+        link(rel='stylesheet', href='../../public/css/login.css')
+        
+        title Login
+
+    body
+        include adminHeader.pug
+
+        .container
+            h3.container-slogan Bilgilerini Güncelle
+
+            form(method='POST')
+                input(type='text', placeholder='Adı', name='name' value=`${profile.name}`)
+                input(type='text', placeholder='Soyadı', name='surname' value=`${profile.surname}`)
+                input(type='text', placeholder='E-Mail', name='email' value=`${profile.email}`)
+                input(type='text', placeholder='Telefon', name='phone' value=`${profile.phone}`)
+                input(type='text', placeholder='Şifre', name='password' value=`${profile.password}`)
+                input(type='submit', value='Bilgileri Güncelle')
+
+        include footer.pug
+        | #{user_id}

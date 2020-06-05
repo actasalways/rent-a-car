@@ -12,13 +12,15 @@ html
 
     body
         #myTopnav.topnav
-            a.active(href='/cvc') CEYHUN GARAGE
+            a.active(href='/admin') CEYHUN GARAGE
+            a(href='/admin/delay') Gecikenler
             .dropdown
                 button.dropbtn
-                    | Settings 
+                    | Araba
                     i.fa.fa-caret-down
                 .dropdown-content
-                    a(href='/cvc/profile') Profile
-                    a(href='/cvc/password') Password
-                    a(href='/cvc/rented') Rented
+                    a(href='/admin/car') Listele
+                    a(href='/admin/car/add') Ekle
+            a(href='/admin/profile') Kullanıcılar
+            a(href='/admin/settings') Ayarlar
             a.icon(href='javascript:void(0);', style='font-size:15px;', onclick='myFunction()') &#x2630;

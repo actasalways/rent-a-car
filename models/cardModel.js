@@ -4,19 +4,19 @@ const Schema = mongoose.Schema;
 const cardSchema = new Schema({
     user_id: Schema.Types.ObjectId,
     card_number: {
-        type: Number,
+        type: String,
         required: false
     },
     expiration_month: {
-        type: Number,
+        type: String,
         required: false
     },
     expiration_year: {
-        type: Number,
+        type: String,
         required: false
     },
     cvv: {
-        type: Number,
+        type: String,
         required: false
     }
 }, { collection: 'card' });

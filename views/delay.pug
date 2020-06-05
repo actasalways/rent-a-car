@@ -1,0 +1,33 @@
+html 
+    head
+        link(rel='stylesheet', href='../public/css/table.css')
+
+        title Admin
+    body
+        include adminHeader.pug
+
+        form.example(method='GET', style='margin:auto;max-width:300px')
+            input(type='text', placeholder='Search..', name='search')
+            button(type='submit')
+                i.fa.fa-search
+        a(href='/admin/delay')
+            button Clear
+                i.fas.fa-broom
+
+        table
+            tr
+                th Sipariş ID
+                th Araç ID
+                th Müşteri ID
+                th Sil
+
+            each delay in delays
+                tr
+                    td #{delay._id}
+                    td #{delay.car_id}
+                    td #{delay.user_id}
+                    td
+                        a(href=`/admin/delay/delete/${delay._id}`) Sil
+            
+
+        include footer.pug

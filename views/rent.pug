@@ -1,33 +1,66 @@
 html
     head
+        link(rel='stylesheet', href='../public/css/index.css')
         link(rel='stylesheet', href='../public/css/rent.css')
 
         title CvC
     body
         include sessionHeader.pug
-
         
-        
-        //-.container
+        .container
             .filter
-                h3 Filtrele
-
+                a(href='/refresh')
+                    button.filtre-buton Temizle
                 form(method='GET')
-                    input(type='text')
+                    p.filter-text Filtrele
+                        .container-input
+                            .satir1
+                                
+                            .satir1
+                                p.kisi-text Kaç Kişi : 
+                                select.araba-kisi(name='passengers')
+                                    option(value='2') 2
+                                    option(value='5') 5
+                                    option(value='6') 6
+                                    option(value='7') 7
+                                    option(value='8') 8
+                            .satir1
+                                p.bagaj-text Bagaj Kapasitesi :
+                                input.bagajtb1(type='text' name='min_liter' value='0')
+                                p.bagaj-separator ---
+                                input.bagajtb2(type='text' name='max_liter' value='1000')
+                            .satir1
+                                p.kapi-text Kaç Kapı : 
+                                select.araba-kapi(name='doors')
+                                    option(value='2') 2 
+                                    option(value='3') 3 
+                                    option(value='4') 4
+                            .satir1
+                                p.fiyat-text Fiyat Aralığı :
+                                input.fiyattb1(type='text' name='min_price' value='0')
+                                p.fiyat-separator ---
+                                input.fiyattb2(type='text' name='max_price' value='1000')
+                            .satir1
+                                input.filtre-buton(type='submit' value='Filtrele')
+                             
 
             .result
                 each car in cars
-                    .car-info
-                        h4.brand #{car.brand}
-                        p.passenger #{car.passengers} Kişilik
-                        p.luggages #{car.luggages} Bavul
-                        p.doors #{car.doors} 
-                        p.price #{car.price}
-                        a(href=`/cvc/rent/${car._id}`)
-                            input(type='submit', value='Kirala')
-                    .car-image
-                        img(src=`${car.img_url}`)
-                        
-                        
-                    
-        
+                    .car-content
+                        .car-content-left
+                            .car-content-left-text
+                                .car-content-left-text-brand
+                                    p #{car.brand}
+                                
+                                p #{car.passengers} Kişilik
+                                p #{car.liter} Litre
+                                P #{car.doors} Kapı
+                                p #{car.price} Tl
+                                a(href=`/cvc/${car._id}`)
+                                    input.kirala-buton(type='submit' value='Aracı Kirala')
+
+                        .car-content-right
+                            .car-image
+                                img(src=`${car.img_url}`)
+        include footer.pug
+        | #{session}

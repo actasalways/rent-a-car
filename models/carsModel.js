@@ -10,7 +10,7 @@ const CarsSchema = new Schema({
         type: Number,
         required: true
     },
-    luggages: {
+    liter: {
         type: Number,
         required: true
     },
@@ -18,12 +18,12 @@ const CarsSchema = new Schema({
         type: Number,
         required: true
     },
-    img_url: {
-        type: String,
-        required: true
-    },
     price: {
         type: Number,
+        required: true
+    },
+    img_url: {
+        type: String,
         required: true
     },
     available: {

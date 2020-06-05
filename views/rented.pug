@@ -1,0 +1,21 @@
+html
+    head
+        link(rel='stylesheet', href='../public/css/table.css')
+
+        title CvC
+    body
+        include sessionHeader.pug
+        <table>
+            <tr>
+                <th>Sipariş ID</th>
+                <th>Alım Tarihi</th>
+                <th>Teslim Tarihi</th>
+            </tr>
+            each rent in rented
+                <tr>
+                    <td>#{rent._id}</td>
+                    <td>#{rent.starting_date.getDate()}-#{rent.starting_date.getMonth() + 1}-#{rent.starting_date.getFullYear()}</td>
+                    <td>#{rent.due_date.getDate()}-#{rent.due_date.getMonth() + 1}-#{rent.due_date.getFullYear()}</td>
+                </tr>
+        </table>
+        include footer.pug

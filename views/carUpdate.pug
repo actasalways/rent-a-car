@@ -1,0 +1,26 @@
+html 
+    head
+        link(rel='stylesheet', href='../../public/css/login.css')
+        link(rel='stylesheet', href='../../public/css/sessionHeader.css')
+        link(rel='stylesheet', href='../../public/css/footer.css')
+
+        title Admin
+    body
+        include adminHeader.pug
+
+        .container
+            h3.container-slogan Bilgilerini Güncelle
+
+            form(method='POST')
+                input(type='text', placeholder='Marka', name='brand' value=`${car.brand}`)
+                input(type='text', placeholder='Kaç Kişi', name='passengers' value=`${car.passengers}`)
+                input(type='text', placeholder='Litre', name='liter' value=`${car.liter}`)
+                input(type='text', placeholder='Kapı', name='doors' value=`${car.doors}`)
+                input(type='text', placeholder='Fiyat', name='price' value=`${car.price}`)
+                input(type='text', placeholder='Resim URL', name='img_url' value=`${car.img_url}`)
+                select(name='available')
+                    option(value='1') True
+                    option(value='0') False
+                input(type='submit', value='Bilgileri Güncelle')
+
+        include footer.pug

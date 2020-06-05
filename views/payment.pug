@@ -1,0 +1,53 @@
+html
+    head
+        link(rel='stylesheet', href='../public/css/index.css')
+        link(rel='stylesheet', href='../public/css/rent.css')
+        link(rel="stylesheet", href='../public/css/payment.css')
+
+        title CvC
+    body
+        include sessionHeader.pug
+        .car-content
+            .car-content-left
+                .car-content-left-text
+                    .car-content-left-text-brand
+                            p #{car.brand}
+                                
+                    p #{car.passengers} Kişilik
+                    p #{car.liter} Litre
+                    P #{car.doors} Kapı
+                    p #{car.price} Tl
+
+            .car-content-right
+                .car-image
+                    img(src=`${car.img_url}`)
+
+        .container-payment
+            .filter
+                form(method='POST')
+                    p.filter-text Tarih
+                        .tarih-div
+                            input.alimtarih(type='date' name='starting_date' value=`${date.year}-${date.month}-${date.day}`)
+                            .separator
+                            input.alimtarih(type='date' name='due_date' value=`${date.year}-${date.month}-${date.oneMoreDay}`)
+
+                    p.filter-text Ödeme 
+                    .container-payment
+                        table
+                            tr
+                                td(colspan='2') 
+                                    input.card_number(type="text" placeholder="Kart Numarası")
+                            tr
+                                td 
+                                    input.expiration(type="text")
+                                td
+                                    input.expiration(type="text")
+                            tr
+                                td
+                                    input.expiration(type="text")
+                                td
+                                    input.payment-button(type='submit', value='Tamamla')
+                                
+        include footer.pug
+        | #{session}
+

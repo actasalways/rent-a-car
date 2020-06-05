@@ -2,8 +2,30 @@ html
     head
         title Welcome
         link(rel='stylesheet', href='../public/css/index.css')
+        link(rel='stylesheet', href='../public/css/rent.css')
 
     body
         include indexHeader.pug
-
+        .main-content
+            .kirala-section
+                .kirala-div
+                    p.kira-title Ceyhun Araç Kiralama
+                    p.kira-alt-text Yüzlerce seyahat sitesinde kiralık araç fırsatları için aynı anda arama yapın
+                    
+            .arac-liste-section
+                each car in cars
+                    .car-content
+                        .car-content-left
+                            .car-content-left-text
+                                .car-content-left-text-brand
+                                    p #{car.brand}
+                                p #{car.passengers} Kişilik
+                                p #{car.liter} Litre
+                                p #{car.doors} Kapı
+                                p #{car.price} ₺
+                                a(href='/login')
+                                    input.kirala-buton(type="submit" value='Araç Kirala')
+                        .car-content-right
+                            .car-image
+                                img(src=`${car.img_url}`)
         include footer.pug

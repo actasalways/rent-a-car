@@ -16,15 +16,6 @@ router.post('/', (req, res) => {
     const promise = user.save();
 
     promise.then(data => {
-        const card = new cardModel({
-            'user_id': data._id,
-            'card_number': '',
-            'expiration_month': '',
-            'expiration_year': '',
-            'cvv': ''
-        });
-        const promise = card.save();
-
         promise.then(() => res.redirect('/login'))
                .catch(err => res.json(err));
     }).catch(err => res.json(err));

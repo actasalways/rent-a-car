@@ -1,76 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .container{
     display: flex;
 }
 
-.filter{
-    background-color: #A9A9A9;
-    width: calc(15% - 10px);
-    padding: 5px;
+.container-input{
+    display: block;
+    
 }
 
-.filter input{
+.satir1{
     width: 100%;
-    font-size: 18px;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 10px;
-    border: none;
-    background-color: #FAFAFA;
+    display: flex;
+}
+
+.filter{
+    width: 30%;
 }
 
 .result{
+    width: 70%;
+    justify-content:space-around;
     display: flex;
     flex-wrap: wrap;
-    background-color: #FFF;
-    width: 85%;
 }
 
-.car-container{
-    display: flex;
-    border: 1px solid #FAFAFA;
-    width: 400px;
-    height: 300px;
-    justify-content: space-around;
-}
-
-.car-info{
-    width: 250px;
-}
-
-.car-info a input[type="submit"]{
-    border: none;
-    background-color: darkorange;
-    color: #FFF;
-    padding: 7px 32px;
-    height: auto;
+.filter-text{
+    color:#474747;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;  
+}
+
+.kisi-text{
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
-    cursor: pointer;
+    margin-left: 20px;
+    font-weight: bold;
+    
+}
+
+.kapi-text{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.araba-kapi{
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    color: #474747;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-left: 65px;
+    font-weight: bold;
+}
+
+.bagaj-text{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: bold;
+    
+}
+
+.fiyat-text{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.fiyattb1{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left:45px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.fiyattb2{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left:10px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.fiyat-separator{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.bagaj-separator{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.bagajtb1{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left:10px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    text-align: center;
+    
+
+}
+
+.bagajtb2{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left:10px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.filtre-buton{
+    width: 170px;
+    height: 30px;
+    background: darkorange;
+    border: none;
+    color: #fff;
+    margin-left: 157px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+}
+
+.araba-kisi{
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    color: #474747;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-left: 70px;
+    font-weight: bold;
+    
+    
+}
+
+/* result kÄ±smÄ± css*/
+
+.car-content{
+    width: 450px;
+    height: 270px;
+    background-color:#fff;
+    box-shadow: 0 10px 11px 0 rgba(0,0,0,0.13);
+    border:1px solid #dee3e8;;
+    display: flex;
+    margin-top: 10px;
+}
+
+.car-content-left{
+    width: 40%;
+    display: block;
+    border-right: 1px solid #dee3e8; 
+}
+
+.car-content-left-text{
+    text-align: center;
+}
+
+.car-content-left-text-brand{
+    width: 100%;
+    border-bottom: 1px solid #dee3e8; 
+    text-align: center;
+}
+
+.car-content-left-text p{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    color: #9b9b9b;
+    font-weight: bold;
+}
+
+.kirala-buton{
+    width: 100%;
+    height: 45px;
+    background: #39b54a;
+    border: 1px solid #7ed321;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    font-size: 19px;
+    margin-top: 17px;
+}
+
+.car-content-right{
+    width: 60%;
+    text-align: center;
 }
 
 .car-image img{
-    width: 300px;
-    height: 250px;
     max-width: 100%;
+    width: 250px;
+    height: 185px;
+    margin-top: 35px;
 }
 
 @media only screen and (max-width: 768px) {
     .container{
         display: block;
     }
-
     .filter{
-        width: calc(100% - 10px);
-        padding: 5px;
+        width: 100%;
+        
     }
-
     .result{
         width: 100%;
     }
-
-    .car-container{
+    .tarih-div{
         width: 100%;
+        justify-content: center;
+    }
+    .alimtarih{
+        width: 150px;
     }
 }

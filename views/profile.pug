@@ -1,0 +1,20 @@
+html
+    head
+        title Login
+        link(rel='stylesheet', href='../public/css/login.css')
+
+    body
+        include sessionHeader.pug
+
+        .container
+            h3.container-slogan Bilgilerini Güncelle
+
+            form(method='POST')
+                input(type='text', placeholder='Adı', name='name' value=`${data.name}`)
+                input(type='text', placeholder='Soyadı', name='surname' value=`${data.surname}`)
+                input(type='text', placeholder='E-Mail', name='email' value=`${data.email}`)
+                input(type='text', placeholder='Telefon', name='phone' value=`${data.phone}`)
+                input(type='submit', value='Bilgileri Güncelle')
+
+        include footer.pug
+        | #{user_id}

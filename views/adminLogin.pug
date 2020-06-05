@@ -1,0 +1,18 @@
+html
+    head
+        title Login
+        link(rel='stylesheet', href='../public/css/login.css')
+
+    body
+        include indexHeader.pug
+
+        .container
+            h1.container-title CEYHUN GARAGE
+            h3.container-slogan Welcome back Boss
+
+            form(method='POST')
+                input(type='text', placeholder='Username', name='username')
+                input(type='password', placeholder='Password', name='password')
+                input(type='submit', value='Giriş Yap')
+
+        include footer.pug

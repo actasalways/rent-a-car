@@ -1,0 +1,36 @@
+html 
+    head
+        link(rel='stylesheet', href='../public/css/table.css')
+
+        title Admin
+    body
+        include adminHeader.pug
+        
+        form.example(method='GET', style='margin:auto;max-width:300px')
+            input(type='text', placeholder='Search..', name='search')
+            button(type='submit')
+                i.fa.fa-search
+        a(href='/admin/profile')
+            button Clear
+                i.fas.fa-broom
+        
+        table
+            tr
+                th Name Surname
+                th E-Mail
+                th Phone
+                th Password
+                th Güncelle
+                th Sil
+            each profile in profiles
+                tr
+                    td #{profile.name} #{profile.surname}
+                    td #{profile.email}
+                    td #{profile.phone}
+                    td #{profile.password}
+                    td 
+                        a(href=`/admin/profile/${profile._id}`) Güncelle
+                    td 
+                        a(href=`/admin/profile/delete/${profile._id}`) Sil
+               
+        include footer.pug

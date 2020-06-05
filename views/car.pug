@@ -1,0 +1,40 @@
+html 
+    head
+        link(rel='stylesheet', href='../public/css/table.css')
+
+        title Admin
+    body
+        include adminHeader.pug
+
+        form.example(method='GET', style='margin:auto;max-width:300px')
+            input(type='text', placeholder='Search..', name='search')
+            button(type='submit')
+                i.fa.fa-search
+        a(href='/admin/car')
+            button Clear
+                i.fas.fa-broom
+                
+        table
+            tr
+                th Marka
+                th Kapasite
+                th Litre
+                th Kapı
+                th Fiyat
+                th Kullanılabilir
+                th Güncelle
+                th Sil
+            each car in cars
+                tr
+                    td #{car.brand}
+                    td #{car.passengers} Kişi
+                    td #{car.liter} Liter
+                    td #{car.doors} Kapı
+                    td #{car.price} ₺
+                    td #{car.available}
+                    td 
+                        a(href=`/admin/car/${car._id}`) Güncelle
+                    td
+                        a(href=`/admin/car/delete/${car._id}`) Sil
+
+        include footer.pug
